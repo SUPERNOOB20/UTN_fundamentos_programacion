@@ -141,7 +141,7 @@ fin
 programa Ecuador
 inicio
 	mostrar: "¿Con qué país limita el NORTE de Ecuador?"
-	ingresar:
+	ingresar: respuestaUno
 
 	mostrar: "OK, y, ¿con qué país limita el SUR de Ecuador?"
 	ingresar: respuestaDos
@@ -159,9 +159,16 @@ fin
 // Ejercicio 10.
 programa
 inicio
+	mostrar: "Ingrese el nombre del alumno."
+	ingresar: nombreAlumno
 
+	mostrar: "Ingrese las notas del alumno" + nombreAlumno + "en los 3 trimestres."
+	ingresar: primeraNota
+	ingresar: segundaNota
+	ingresar: terceraNota
+
+	mostrar: "El alumno " + nombreAlumno + " obtuvo las notas " + primeraNota + ", " + segundaNota + " y " + terceraNota +  ", respectivamente."
 fin
-
 
 
 
@@ -177,12 +184,27 @@ inicio
 	primeroAlCuadrado = longitud ^ 2
 	segundoAlCuadrado = longitud ^ 2
 
-	mostrar: "La longitud mide" + sqrt(primeroAlCuadrado + segundoAlCuadrado) + "."
+	mostrar: "La longitud mide" + sqrt(primeroAlCuadrado + segundoAlCuadrado)^0.5 + "."			// sqrt(primeroAlCuadrado + segundoAlCuadrado)
 fin
 
 
 
 // Ejercicio 12.
+programa CalculaEdad
+inicio
+	mostrar: "¿En que año naciste?"
+	ingresar: anioNacimiento
+	
+	mostrar: "¿En qué año estamos?"
+	ingresar: anioActual
+
+	edad = anioActual - anioNacimiento
+
+	mostrar: "Ah, entonces, si ya cumpliste este año, tenés " + edad + "!"
+	mostrar: "En cambio, si todavía no cumpliste este año, todavía tenés " + edad - 1 + "!"
+fin
+
+
 
 // Ejercicio 13.
 
