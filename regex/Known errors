@@ -1,6 +1,6 @@
 Known errors:
 
-*
-*
-* [][A-Z] in strings (fix: no strings or look for "programa" first.)
+* ([0-9], )[0-9], ^[0-9] and similar patterns not getting matched.											// Last present in v1.0.0c
+* [][A-Z][A-Z] in strings getting matched incorrectly (fix: no strings or look for "programa" first). 		// Last present in v1.0.0c
 
+If you find any errors not present here, please open an Issue or a pull request, or contact me by any means necessary :3
