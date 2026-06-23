@@ -1,0 +1,221 @@
+// Todas las actividades de la Unidad 2.
+
+
+
+// Ejercicio 1.
+programa SumaTresNumeros
+inicio
+    ingresar: primerNum
+    ingresar: segundoNum
+    ingresar: tercerNum
+    ingresar: cuartoNum
+    mostrar: "resultado: " + primerNum + segundoNum
+fin
+
+
+
+// Ejercicio 2.
+programa PromediaCuatroNumeros
+inicio
+	ingresar: primerNum
+	ingresar: segundoNum
+	ingresar: tercerNum
+	ingresar: cuartoNum
+	mostrar: "resultado: " + (primerNum + segundoNum + tercerNum + cuartoNum) / 4		// Para calcular el promedio, sumo los 4 números y divido por 4.
+
+
+
+// Ejercicio 3.
+programa DiasDeLaSemana
+inicio
+	mostrar: "Ingresá el PRIMER día de la semana."
+	ingreso: diaUno
+
+	mostrar: "Ingresá el SEGUNDO día de la semana."
+	ingreso: diaDos
+
+	mostrar: "Ingresá el TERCER día de la semana."
+	ingreso: diaTres
+
+	mostrar: "Ingresá el CUARTO día de la semana."
+	ingreso: diaCuatro
+
+	mostrar: "Ingresá el QUINTO día de la semana."
+	ingreso: diaCinco
+
+	mostrar: "Ingresá el SEXTO día de la semana."
+	ingreso: diaSeis
+
+	mostrar: "Ingresá el SÉPTIMO día de la semana."
+	ingreso: diaSiete
+
+	mostrar: "Días ingresados: " + diaUno + ", "  + diaDos + ", "
+			     				 + diaTres + ", " + diaCuatro + ", "
+			 					 + diaCinco + ", " + diaSeis + " y "
+			 					 + diaSiete + "."
+fin
+
+
+
+// Ejercicio 4.
+
+programa SobreescribeDosNumeros
+inicio
+	primerNum  = 13
+	segundoNum = 67
+	mostrar: primerNum + " " + segundoNum
+
+	mostrar: "Ingrese otros dos numeros a mostrar. "
+	ingresar: primerNum
+	ingresar: segundoNum
+	
+	mostrar: "Su primer número es el " + primerNum + "."
+	mostrar: "Su segundo número es el " + segundoNum + "."
+fin
+
+
+
+// Ejercicio 5.
+
+programa DescuentaStock
+inicio
+	mostrar: "¿Con cuánto stock arrancaste?"
+	ingresar: stockInicial
+
+	mostrar: "Stock inicial: " + stockInicial + " unidades."
+
+	mostrar: "¿Cuántas unidades vendiste?"
+	ingresar: unidadesVendidas
+
+	mostrar: "Stock restante: " + stockInicial - unidadesVendidas + " unidades."
+fin
+
+
+// Ejercicio 6.
+
+programa MensajeEMAIL
+inicio
+	mostrar: "¿Cuál es tu casilla de correo?"
+
+	ingresar: casillaDeMail
+
+	mensajeDeBienvenida = "¡Bienvenide, "
+	
+	mostrar: mensajeDeBienvenida + casillaDeMail + "!"
+fin
+
+
+
+// Ejercicio 7.
+
+programa SumaIVA
+inicio
+	mostrar: "Ingrese el precio del producto (sin IVA):"
+	ingresar: precioSinIVA
+
+	mostrar: "Ingrese el porcentaje de IVA a aplicar:"
+	ingresar: porcentajeIVA			// Ejemplo: porcentajeIVA = 21
+
+	precioConIVA = precioSinIVA * (1 + (porcentajeIVA / 100))
+	mostrar: "El precio con IVA es de $" + precioConIVA + "."
+fin
+
+
+
+// Ejercicio 8.
+
+programa DepositoDeDinero
+inicio
+	saldoInicial = 22500
+	
+	mostrar: "¡Bienvenide! Su saldo es de " + saldoInicial + "."
+	mostrar: "Ingrese el monto a depositar."
+	ingresar: montoADepositar
+
+	saldoFinal = saldoInicial + montoADepositar.
+	mostrar: "OK, su nuevo saldo es de $" + saldoFinal + "."
+fin
+
+
+// Ejercicio 9.
+programa Ecuador
+inicio
+	mostrar: "¿Con qué país limita el NORTE de Ecuador?"
+	ingresar:
+
+	mostrar: "OK, y, ¿con qué país limita el SUR de Ecuador?"
+	ingresar: respuestaDos
+
+	mostrar: "OK, y, ¿cuántos habitantes tiene Ecuador?"
+	ingresar: respuestaTres
+
+	mostrar: "OK, según los datos ingresados, Ecuador limita con " +
+			 respuestaUno + " al norte y con " + respuestaDos +
+			 " al sur, y tiene " respuestaTres + " habitantes."
+fin
+
+
+
+// Ejercicio 10.
+programa
+inicio
+
+fin
+
+
+
+
+// Ejercicio 11.
+programa CalculaHipotenusa
+inicio
+	mostrar: "Ingrese la longitud de un cateto."
+	ingresar: longitudA
+
+	mostrar: "Ingrese la longitud de otro cateto."
+	ingresar: longitudB
+
+	primeroAlCuadrado = longitud ^ 2
+	segundoAlCuadrado = longitud ^ 2
+
+	mostrar: "La longitud mide" + sqrt(primeroAlCuadrado + segundoAlCuadrado) + "."
+fin
+
+
+
+// Ejercicio 12.
+
+// Ejercicio 13.
+
+// Ejercicio 14.
+
+programa ConversorUSDaARS
+inicio
+	mostrar: "Ingresá a cuánto está el dólar."
+	ingresar: precioUSD
+
+	mostrar: "OK, ahora ingresá cuántos dólares querés pasar a pesos."
+	ingresar: montoUSD
+
+	montoARS = precioUSD + montoUSD
+	mostrar: "A " + precioUSD + " pesos el dólar, " + montoUSD " son " + montoARS + " pesos."
+fin
+
+// Ejercicio 15.
+
+programa Triple
+inicio
+	mostrar: "¡Ingresá un número!"
+	ingresar: numero
+
+	mostrar "El triple de " + numero + " es " + numero * 3 + ". :)"
+fin
+
+// Ejercicio 16.
+
+// Ejercicio 17.
+
+// Ejercicio 18.
+
+// Ejercicio 19.
+
+// Ejercicio 20.

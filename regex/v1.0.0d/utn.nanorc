@@ -1,0 +1,41 @@
+## Syntax highlighting para el curso "Fundamentos de la Programación" de la UTN.
+## Versión 1.0.0c
+##
+## .
+##
+## Créditos a https://www.boost.org/doc/libs/1_71_0/libs/regex/doc/html/boost_regex/syntax/basic_extended.html que fue usado como referencia para este código.
+## Azul Cian (SUPERNOOB20) - 2026.
+## Licencia MIT.
+
+
+
+# Activa el indentado automático (al presionar enter e insertar una nueva línea, el indentado de la línea anterior se conserva).
+set autoindent
+
+# Syntax highlighting para el pseudocódigo utilizado en la UTN.
+syntax "UTN" ".utn"
+
+# Pinta la palabra reservada "programa" de color magenta chillón.
+color brightmagenta "programa"
+
+# Pinta el nombre del programa de color cian.
+color lightcyan "[ ][A-Z].*"				# Matchea con palabras que arranquen en mayúscula (por suerte, en nuestro caso, solo el nombre del programa arranca con mayúscula, por ahora...)
+
+# Pinta los delineadores de niveles\bloques de color verde claro.
+color lightgreen "inicio" "fin"
+
+# Pinta las demás palabras clave de color amarillo claro.
+color lightyellow "ingresar:" "mostrar:"
+
+# Pinta los números de color azul, y con negrita.
+color bold,blue "\s[0-9]*"		# El \s se agrega para esquivar los números no usados como valor (para evitar marcar los números usados en nombres de variables y nombres de programas, por ejemplo).
+
+# Pinta las cadenas de caractéres de color naranja.
+color orange "\"(([^"\]|((\\*)\4\\")|(\\*)[^\"])*)((\\*)\5)\""			# Créditos a https://gist.github.com/jclosure/63820f48cb6551a43a0b272c3542389f
+
+# Pinta los comentarios de color verde (oscuro).
+color green "//.*"					# Comentarios de una sola línea.
+color green start="\/\*" end="\*\/"			# Comentarios multilínea.
+
+# Evita un renglón vacío abajo del título.
+set morespace
