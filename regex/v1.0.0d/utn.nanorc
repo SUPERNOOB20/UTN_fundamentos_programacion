@@ -27,8 +27,8 @@ color brightmagenta "programa"
 # Pinta el nombre del programa de color cian.
 color lightcyan "[ ][A-Z].[^ ]{1,999}"				# Matchea con palabras que arranquen en mayúscula (por suerte, en nuestro caso, solo el nombre del programa arranca con mayúscula, por ahora...).
 								# 
-								# ADVERTENCIA: Se puede cambiar el límite de 30 mayúsculas por nombre de programa,
-								# pero instertar un número demasiado grande hará que los programas tarden mucho en cargar...
+								# ADVERTENCIA: Se puede cambiar el límite de 999 mayúsculas por nombre de programa,
+								# pero insertar un número demasiado grande hará que los programas tarden mucho en cargar...
 
 								
 
