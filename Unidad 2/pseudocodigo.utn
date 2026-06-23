@@ -22,6 +22,7 @@ inicio
 	ingresar: tercerNum
 	ingresar: cuartoNum
 	mostrar: "resultado: " + (primerNum + segundoNum + tercerNum + cuartoNum) / 4		// Para calcular el promedio, sumo los 4 números y divido por 4.
+fin
 
 
 
@@ -58,7 +59,6 @@ fin
 
 
 // Ejercicio 4.
-
 programa SobreescribeDosNumeros
 inicio
 	primerNum  = 13
@@ -76,7 +76,6 @@ fin
 
 
 // Ejercicio 5.
-
 programa DescuentaStock
 inicio
 	mostrar: "¿Con cuánto stock arrancaste?"
@@ -91,8 +90,8 @@ inicio
 fin
 
 
-// Ejercicio 6.
 
+// Ejercicio 6.
 programa MensajeEMAIL
 inicio
 	mostrar: "¿Cuál es tu casilla de correo?"
@@ -107,7 +106,6 @@ fin
 
 
 // Ejercicio 7.
-
 programa SumaIVA
 inicio
 	mostrar: "Ingrese el precio del producto (sin IVA):"
@@ -123,7 +121,6 @@ fin
 
 
 // Ejercicio 8.
-
 programa DepositoDeDinero
 inicio
 	saldoInicial = 22500
@@ -207,9 +204,18 @@ fin
 
 
 // Ejercicio 13.
+programa
+inicio
+	mostrar: "Ingresá tu sueldo."					// (En $).
+	ingresar: sueldoSinAumento
+
+	sueldoConAumento = sueldoSinAumento * 1.2		// Aplica un aumento del 20%
+
+	mostrar: "Tu sueldo, con un 20% de aumento, es de $" + sueldoConAumento + "."
+fin
+
 
 // Ejercicio 14.
-
 programa ConversorUSDaARS
 inicio
 	mostrar: "Ingresá a cuánto está el dólar."
@@ -222,8 +228,9 @@ inicio
 	mostrar: "A " + precioUSD + " pesos el dólar, " + montoUSD " son " + montoARS + " pesos."
 fin
 
-// Ejercicio 15.
 
+
+// Ejercicio 15.
 programa Triple
 inicio
 	mostrar: "¡Ingresá un número!"
@@ -232,12 +239,81 @@ inicio
 	mostrar "El triple de " + numero + " es " + numero * 3 + ". :)"
 fin
 
+
+
 // Ejercicio 16.
+programa
+inicio
+	mostrar: "¡Bienvenida, Claudia! ¿Cómo te dicen?"
+	ingresar: apodo
+	
+	mostrar: apodo + ", decime tu edad."
+	ingresar: edad
+
+	mostrar: "¡Gracias " + apodo + "! Tenés " + edad + "años." 
+fin
+
+
 
 // Ejercicio 17.
+programa descuentaGastosMensuales
+inicio
+	mostrar: "¿Cuánto ganas al mes?"
+	ingresar: sueldoMensual
+
+	mostrar: "OK, y ¿cuánto gastás al mes?"
+	ingresar: gastosMensuales
+	
+	mostrar: "Tu sueldo mensual es $" + sueldoMensual + ", pero, después de descontar $" + gastosMensuales + " en gastos mensuales, te quedan $" + sueldoMensual - gastosMensuales + " restantes de monto neto."
+fin
+
+
 
 // Ejercicio 18.
+programa clubEstadisticas
+inicio
+	mostrar: "¿Cómo se llama el club?"
+	ingresar: nombreClub
+
+	mostrar: "¿Cuántos puntos sacó el club " + primeraTemporada + " en la primera temporada?"
+	ingresar: primeraTemporada
+
+	mostrar: "¿Cuántos puntos sacó el club " + segundaTemporada + " en la primera temporada?"
+	ingresar: segundaTemporada
+
+	mostrar: "¿Cuántos puntos sacó el club " + terceraTemporada + " en la primera temporada?"
+	ingresar: terceraTemporada
+
+	promedio = (primeraTemporada + segundaTemporada + terceraTemporada) / 3				// Para calcular el promedio, sumo los 3 números y divido por 3.
+	mostrar: "El club " + nombreClub + " sacó " + promedio + " puntos, en promedio, en las últimas 3 temporadas."
+fin
+
+
 
 // Ejercicio 19.
+programa porcentaje
+inicio
+	mostrar: "Ingresá el número a tomar como referencia (100%)."
+	ingresar: cantidadTotal
+
+	mostrar: "Ingresá el número del que querés averiguar el porcentaje."
+	ingresar: cantidadPedida
+
+	porcentajeFinal = cantidadTotal / cantidadPedida
+	mostrar: cantidadPedida + " es " + porcentajeFinal / 100 + "% de " + cantidadTotal + "."
+fin
+
+
 
 // Ejercicio 20.
+programa precioTanqueLleno
+inicio
+	mostrar: "¿A cuánto está el litro de combustible?"
+	ingresar: precioPorLitro
+
+	mostrar: "¿Cuántos litros de combustible te faltan para llenar el tanque?"
+	ingresar: litrosALlenar		// "Litros a llenar"
+	precioTotal = precioPorLitro * litrosALlenar		// De tipo "float" (debería ser un número real, o lo más cercano a ello que permita la implementación).
+
+	mostrar: "Para llenar el tanque, el costo es de $" + precioTotal + "."
+fin
