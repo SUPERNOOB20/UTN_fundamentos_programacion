@@ -1,0 +1,483 @@
+// Ejercicios de la Unidad 3.
+
+
+// Ejercicio 1.
+programa DetectaFiebre
+inicio
+
+	var float temperatura
+
+	mostrar: "Ingrese su temperatura."
+	ingresar: temperatura
+
+	si temperatura > 37
+		mostrar: "¡Ay, no! Tenés fiebre :c"
+	sino
+		mostrar: "¡Genial! Estás bien, no tenés fiebre :3"
+	fin si
+fin
+
+
+
+// Ejercicio 2.
+programa EsCoupe
+inicio
+	var integer nroDePuertas
+
+	mostrar: "¿Cuántas puertas tiene el vehículo?"
+	ingresar nroDePuertas
+	
+	si nroDePuertas = 2
+		mostrar: "Ah, ¡es un coupé!"
+	sino
+		mostrar: "Ah... NO es un coupé."
+fin
+
+
+
+// Ejercicio 3.
+programa PodesVotar
+inicio
+
+	var integer edad
+
+	mostrar: "¡Hola! Ingresá tu edad a continuación."
+	ingresar: edad
+	
+	si edad < 16
+		mostrar: "¡No podés votar! Esperá hasta cumplir los 16..."
+	
+	sino
+		mostrar: "¡Genial, tenés más de 16 años! Podés votar :)"
+fin
+
+
+// Ejercicio 4.
+programa PodesSubir
+inicio
+
+	var float altura
+
+	mostrar: "¡Hola, bienvenide al juego mecánico! :3"
+	
+	mostrar: "Ingresá tu altura a continuación."
+	ingresar: altura
+	
+	si altura < 1.2
+		mostrar: "¡No podés subirte! Sos demasiado bajite..."
+		mostrar: "Volvé cuando estés más crecide! :3"
+	
+	sino
+		mostrar: "¡Genial! Podés subir :)"
+fin
+
+
+// Ejercicio 5.
+programa LaMejorRadio
+inicio
+
+	var string claveGuardada
+	var string claveIngresada
+
+	claveGuardada = "ReimuLaMasMejor"
+
+	mostrar:  "Ingresá tu clave."
+	ingresar: claveIngresada
+
+	si claveGuardada = claveIngresada
+		mostrar: "La clave es correcta. ¡Bienvenide! :3"
+	sino
+		mostrar: "La clave es incorrecta. Intentalo nuevamente..."
+fin
+
+
+// Ejercicio 6.
+programa EsSedan
+inicio
+	var integer nroDePuertas
+
+	mostrar: "¿Cuántas puertas tiene el vehículo?"
+	ingresar nroDePuertas
+	
+	si nroDePuertas = 4
+		mostrar: "Ah, ¡es un sedán!"
+	sino
+		mostrar: "Ah... NO es un sedán."
+fin
+
+
+
+// Ejercicio 7.
+programa chequeaParidadPatente
+inicio
+
+	var integer ultimosTresNumerosPatente
+
+	mostrar: "¡Bienvenide! Ingresá los últimos tres números de tu patente."
+	ingresar: patente
+
+
+
+	si (patente % 2) = 0
+		mostrar: "La patente ingresada es par."
+		
+	sino
+		mostrar: "La patente ingresada es impar."
+		
+fin
+
+
+
+// Ejercicio 8.
+programa EsMayorDeEdad
+inicio
+	var integer edad
+
+	mostrar: "¡Hola! ¿Cuántos años tenés?"
+	ingresar edad
+	
+	si edad < 18
+		mostrar: "Ah, sos menor de edad."
+	sino
+		mostrar: "Ah, sos mayor de edad."
+fin
+
+
+
+// Ejercicio 9.
+programa RevisaRangoAltura
+inicio
+
+	var float altura
+
+	mostrar: "¡Hola! Ingresá tu altura."
+	ingresar: altura
+
+	en caso de altura hacer
+		caso altura > 1.70
+			mostrar: "¡Wow! ¡Sos re alte!"
+		caso altura < 1.50
+			mostrar: "¡Wow! ¡Sos re bajite!"
+		sino
+			mostrar: "Ah, OK. ¡Nada mal! Sos de estatura media :3"
+fin
+
+
+// Ejercicio 10.
+programa ValidaRangoFecha
+inicio
+
+	var date anio
+
+	mostrar: "¡Hola! Ingresá el año a validar."
+	ingresar: anio
+
+	en caso de anio hacer
+		caso anio >= 2000
+			caso anio <= 2010
+				mostrar: "¡OK! Anio válido :3"		// Corre si 2000 <= anio <= 2010.
+			fin caso
+		fin caso
+		sino
+			mostrar: "¡No! Caso inválido... D:"
+	fin en caso de
+fin
+
+
+// Ejercicio 11.
+programa EdadDeVotar
+inicio
+
+	var integer edad
+
+	mostrar: "¡Hola! Ingresá tu edad."
+	ingresar: edad
+
+	en caso de edad hacer:
+	
+		caso edad < 18
+			mostrar: "¡No podés votar todavía! Esperá a ser mayor de edad ;3"
+		fin caso
+		
+		caso edad > 70
+			mostrar: "¡Podés votar si querés, pero no estás obligade a hacerlo :3"
+		fin caso
+		
+		sino 
+			mostrar: "Tenés que votar, ¡estás obligade a hacerlo!"
+		fin caso
+fin
+
+
+// Ejercicio 12.
+programa PosicionDeSalida
+inicio
+
+	var integer posicionDeSalida
+
+	mostrar: "¡Ingresá la posición de salida del auto!"
+	ingresar: posicionDeSalida
+
+	// Vamos a asumir 2 autos por fila.
+
+	en caso de posicionDeSalida hacer
+	
+		caso posicionDeSalida = 1
+			mostrar: "¡El auto salió primero! :O"
+		fin caso
+		
+		caso posicionDeSalida < 4
+			mostrar: "El auto salió en la fila número " + (posicionDeSalida + 1) div 2 "."		// MAGIA TOTAL... (ver el archivo adjunto)
+		fin caso
+		
+		caso posicionDeSalida <= 16		// Caso "medio".
+			mostrar: "El auto salió en el medio (._.)"
+		fin caso
+		
+		sino
+			mostrar: "El auto salió al final :c"
+		fin caso
+	fin en caso de	
+fin
+
+
+// Ejercicio 13.
+programa CalculaValorEnvio
+inicio
+	var float valorDeCompra
+	var float valorEnvio
+
+	en caso de valorDeCompra hacer
+
+		caso valorDeCompra >= 1000 Y valorDeCompra < 2000
+			valorEnvio = 150
+			mostrar: "El envío está bonificado."
+			mostrar: "El envio te va a salir $" + valorEnvio + "."
+		fin caso
+
+		caso valorDeCompra < 1000
+			valorEnvio = 250
+			mostrar: "El envío se paga completo."
+			mostrar: "El envio te va a salir $" + valorEnvio + "."
+		fin caso
+
+		sino		// Cuando el valor de compra es de mayor o igual a $2.000.
+			valorEnvio = 0
+			mostrar: "El envío es gratis :)"
+		fin caso
+	fin en caso de
+fin
+
+
+// Ejercicio 14.
+programa FormasDePago
+inicio
+
+	var string formaDePago
+
+	mostrar: "¿Con qué vas a pagar? (EFECTIVO / TARJETA)"
+	ingresar: formaDePago
+
+	en caso de formaDePago hacer
+		caso "EFECTIVO"
+			mostrar: "Genial, muchas gracias, que tengas un buen día :)"
+		fin caso
+		
+		caso "TARJETA"
+			mostrar: "Aguarde un momento, en breve le atenderán para cobrarle."
+		fin caso
+		
+		sino
+			mostrar: "Lo sentimos, esa forma de pago es inválida."
+			mostrar: "Intente nuevamente con otro medio de pago."
+		fin caso
+	fin en caso de
+fin
+
+
+// Ejercicio 15.
+programa EsGensokyoRadio
+inicio
+
+	var string laMejorRadio
+	var string tuRadio
+
+	laMejorRadio = "Gensokyo Radio"
+
+	mostrar: "¡Hola! ¿Cuál es tu radio favorita?"
+	ingresar: tuRadio
+
+	si tuRadio = "Gensokyo Radio"
+		mostrar: "Esaaaa :3"
+	sino
+		mostrar: "Ah, bueno. Esa está buena, pero no es la mejor radio... zzz..."	
+fin
+
+
+// Ejercicio 16.
+programa MuestraNotaCualitativa
+inicio
+
+	var float notaNumerica
+
+	mostrar: "¿Qué nota te sacaste? (Ingrese un NÚMERO)."
+	ingresar: notaNumerica
+
+	si notaNumerica >= 9	// 9 <= nota <= 10.
+		mostrar: "¡¡¡Muy sobresaliente!!! :D"
+	sino si	notaNumerica >= 6			// 6 <= nota < 9.
+		mostrar: "¡Sobresaliente! :D"
+	sino	// nota < 6.
+		mostrar: "Desaprobado... ¡estudiá más para la próxima!"
+fin
+
+
+// Ejercicio 17.
+programa ubicacionTelefono
+inicio
+
+	// No nos conviene usar un integer si el código telefónico puede arrancar en 0...
+	var string codigoTelefonico
+	var string ubicacion
+
+	mostrar: "Ingrese un código telefónico."
+	ingresar: codigoTelefonico
+
+	en caso de codigoTelefonico hacer
+		caso "011"
+			ubicacion = "la Capital Autónoma de Buenos Aires."
+		fin caso
+
+		caso "0341"
+			ubicacion = "Santa Fe."
+		fin caso
+
+		caso "0343"
+			ubicacion = "Entre Ríos."
+		fin caso
+	fin en caso de
+
+	mostrar: "El código telefónico ingresado es de " + ubicacion
+fin
+
+
+// Ejercicio 18.
+programa calificaMultipleChoice
+inicio
+
+	var integer cantidadDeAciertos
+	var string nota
+
+
+	mostrar: "¿Cuántas respuestas bien tuviste?"
+	ingresar: cantidadDeAciertos
+	
+	si cantidadDeAciertos >= 90
+		nota = "Sobresaliente"
+	sino si cantidadDeAciertos >= 70
+		nota = "Notable"
+	sino si cantidadDeAciertos >= 50
+		nota = "Bien"
+	sino si cantidadDeAciertos >= 40
+		nota = "Aprobade"
+	sino
+		nota = "Suspendide"
+
+	mostrar: "Tu calificación es la siguiente: " + nota + "."
+fin
+
+
+
+// Ejercicio 19.
+programa
+inicio
+	// TODO.
+
+	const string trabajo
+	const float salario		// En nuestro caso va a ser integer, pero podría llegar a tratarse de un float si se cambian los salarios en algún momento.
+	const float bono		// En nuestro caso va a ser integer, pero podría llegar a tratarse de un float si se cambian los salarios en algún momento.
+
+	mostrar: "¿Cuál es tu trabajo? (gerente / supervisor / asistente)"
+	ingresar: trabajo
+
+	si trabajo = "gerente"
+		salario = 100000
+
+	sino si trabajo = "supervisor"
+		salario = 55000
+
+	sino si trabajo = "asistente"
+		salario = 23000
+
+	bono = salario / 4
+	mostrar: "Tu remuneración anual es de $" + salario + " y tu bono por presentismo es de $ " + bono + "."
+	
+	sino
+		mostrar: "Trabajo inválido. Intente nuevamente"
+fin
+
+
+
+// Ejercicio 20.
+programa EstacionDelAnio
+inicio
+
+	// Más específicamente, es de tipo "char".
+	var string estacionPrimeraLetra
+
+	mostrar: "Ingresá la primera letra de la estación del año en la que estamos (P/I/V/O)."
+	ingresar: estacionNombreCompleto
+	
+	en caso de estacionPrimeraLetra hacer
+		caso "P"
+			mostrar: "Estamos en Primavera."
+		caso "I"
+			mostrar: "Estamos en Invierno."
+		caso "V"
+			mostrar: "Estamos en Verano."
+		caso "O"
+			mostrar: "Estamos en Otoño."
+		sino
+			mostrar: "Estación inválida... probá nuevamente"
+	fin en caso de
+fin
+
+
+// .
+// .
+// .
+// Ejercicios de la segunda parte del PDF...
+
+
+// Ejercicio 21
+programa NumerosDecreciente
+inicio
+
+	var integer numeroActual
+
+	numeroActual = 100
+
+	mientras numeroActual >= 0 hacer
+		mostrar: numeroActual
+		numeroActual--		// numeroActual = numeroActual - 1
+	fin mientras
+fin
+
+
+
+
+// Ejercicio 22
+programa EsVocal
+inicio
+
+	// Tipo de dato "char", en realidad.
+	var string letra
+
+	mostrar: "Ingresá una letra."
+	ingresar: letra
+
+	si letra = ("a" O "A" O "e" O "E" O "i" O "I" O "o" O "O" O "u" O "U")
+		mostrar: "La letra ingresada es una vocal"
+	sino
+		mostrar: "La letra ingresada NO es una vocal"
+fin
