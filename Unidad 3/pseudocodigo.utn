@@ -10,7 +10,7 @@ inicio
 	mostrar: "Ingrese su temperatura."
 	ingresar: temperatura
 
-	si temperatura > 37
+	si temperatura > 37 entonces
 		mostrar: "¡Ay, no! Tenés fiebre :c"
 	sino
 		mostrar: "¡Genial! Estás bien, no tenés fiebre :3"
@@ -27,10 +27,11 @@ inicio
 	mostrar: "¿Cuántas puertas tiene el vehículo?"
 	ingresar nroDePuertas
 	
-	si nroDePuertas = 2
+	si nroDePuertas = 2 entonces
 		mostrar: "Ah, ¡es un coupé!"
 	sino
 		mostrar: "Ah... NO es un coupé."
+	fin si
 fin
 
 
@@ -44,11 +45,13 @@ inicio
 	mostrar: "¡Hola! Ingresá tu edad a continuación."
 	ingresar: edad
 	
-	si edad < 16
+	si edad < 16 entonces
 		mostrar: "¡No podés votar! Esperá hasta cumplir los 16..."
 	
 	sino
 		mostrar: "¡Genial, tenés más de 16 años! Podés votar :)"
+		
+	fin si
 fin
 
 
@@ -63,12 +66,14 @@ inicio
 	mostrar: "Ingresá tu altura a continuación."
 	ingresar: altura
 	
-	si altura < 1.2
+	si altura < 1.2 entonces
 		mostrar: "¡No podés subirte! Sos demasiado bajite..."
 		mostrar: "Volvé cuando estés más crecide! :3"
 	
 	sino
 		mostrar: "¡Genial! Podés subir :)"
+
+	fin si
 fin
 
 
@@ -84,10 +89,13 @@ inicio
 	mostrar:  "Ingresá tu clave."
 	ingresar: claveIngresada
 
-	si claveGuardada = claveIngresada
+	si claveGuardada = claveIngresada entonces
 		mostrar: "La clave es correcta. ¡Bienvenide! :3"
+		
 	sino
 		mostrar: "La clave es incorrecta. Intentalo nuevamente..."
+
+	fin si
 fin
 
 
@@ -99,31 +107,33 @@ inicio
 	mostrar: "¿Cuántas puertas tiene el vehículo?"
 	ingresar nroDePuertas
 	
-	si nroDePuertas = 4
+	si nroDePuertas = 4 entonces
 		mostrar: "Ah, ¡es un sedán!"
 	sino
 		mostrar: "Ah... NO es un sedán."
+	fin si
 fin
 
 
 
 // Ejercicio 7.
-programa chequeaParidadPatente
+programa ChequeaParidadPatente
 inicio
 
 	var integer ultimosTresNumerosPatente
 
 	mostrar: "¡Bienvenide! Ingresá los últimos tres números de tu patente."
-	ingresar: patente
+	ingresar: ultimosTresNumerosPatente
 
 
 
-	si (patente % 2) = 0
+	si (ultimosTresNumerosPatente % 2) = 0 entonces
 		mostrar: "La patente ingresada es par."
 		
 	sino
 		mostrar: "La patente ingresada es impar."
 		
+	fin si
 fin
 
 
@@ -131,15 +141,17 @@ fin
 // Ejercicio 8.
 programa EsMayorDeEdad
 inicio
+
 	var integer edad
 
 	mostrar: "¡Hola! ¿Cuántos años tenés?"
 	ingresar edad
 	
-	si edad < 18
+	si edad < 18 entonces
 		mostrar: "Ah, sos menor de edad."
 	sino
 		mostrar: "Ah, sos mayor de edad."
+	fin si
 fin
 
 
@@ -160,6 +172,8 @@ inicio
 			mostrar: "¡Wow! ¡Sos re bajite!"
 		sino
 			mostrar: "Ah, OK. ¡Nada mal! Sos de estatura media :3"
+		fin caso
+	fin en caso de
 fin
 
 
@@ -206,6 +220,7 @@ inicio
 		sino 
 			mostrar: "Tenés que votar, ¡estás obligade a hacerlo!"
 		fin caso
+	fin en caso de
 fin
 
 
@@ -311,6 +326,7 @@ inicio
 		mostrar: "Esaaaa :3"
 	sino
 		mostrar: "Ah, bueno. Esa está buena, pero no es la mejor radio... zzz..."	
+	fin si
 fin
 
 
@@ -329,11 +345,12 @@ inicio
 		mostrar: "¡Sobresaliente! :D"
 	sino	// nota < 6.
 		mostrar: "Desaprobado... ¡estudiá más para la próxima!"
+	fin si
 fin
 
 
 // Ejercicio 17.
-programa ubicacionTelefono
+programa UbicacionTelefono
 inicio
 
 	// No nos conviene usar un integer si el código telefónico puede arrancar en 0...
@@ -362,7 +379,7 @@ fin
 
 
 // Ejercicio 18.
-programa calificaMultipleChoice
+programa CalificaMultipleChoice
 inicio
 
 	var integer cantidadDeAciertos
@@ -382,14 +399,15 @@ inicio
 		nota = "Aprobade"
 	sino
 		nota = "Suspendide"
-
+	fin si
+	
 	mostrar: "Tu calificación es la siguiente: " + nota + "."
 fin
 
 
 
 // Ejercicio 19.
-programa
+programa CalculaSalarios
 inicio
 	// TODO.
 
@@ -414,6 +432,7 @@ inicio
 	
 	sino
 		mostrar: "Trabajo inválido. Intente nuevamente"
+	fin si
 fin
 
 
@@ -480,4 +499,5 @@ inicio
 		mostrar: "La letra ingresada es una vocal"
 	sino
 		mostrar: "La letra ingresada NO es una vocal"
+	fin si
 fin

@@ -1,0 +1,95 @@
+## Syntax highlighting para el curso "Fundamentos de la Programación" de la UTN.
+## Versión 1.1.1
+##
+## Novedades de esta versión:
+###### Agrega "mientras" y el resto de palabras reservadas que faltaban.
+##
+## .
+##
+## Créditos a https://www.boost.org/doc/libs/1_71_0/libs/regex/doc/html/boost_regex/syntax/basic_extended.html y
+## https://www.regular-expressions.info/refadv.html que fueron usados como referencia para este código.
+## Este código es bastante tosco en ocasiones dado que se limita a utilizar solo regex POSIX ERE, ya que Unix no ofrece implementaciones más cómodas y modernas...
+## 
+## .
+##
+## Azul Cian (SUPERNOOB20) - 2026.
+## Licencia MIT.
+
+# Activa el indentado automático (al presionar enter e insertar una nueva línea, el indentado de la línea anterior se conserva).
+set autoindent
+
+# Syntax highlighting para el pseudocódigo utilizado en la UTN.
+syntax "UTN" ".utn"
+
+# Temporary.
+##### color bold,white "[a-zA-Z0-9]*"		# Workaround a lo POSIX ERE, dada la imposibilidad de usar patrones de regex lookback.
+
+
+# Pinta el nombre del programa de color cian.
+color lightcyan "programa[ ][A-Z].[^ ]{1,99}"				# Matchea con palabras que arranquen en mayúscula (por suerte, en nuestro caso, solo el nombre del programa arranca con mayúscula, por ahora...).
+									# 
+									# ADVERTENCIA: Se puede cambiar el límite de 99 mayúsculas por nombre de programa (el 99 de acá es solo un número arbitrario),
+									# pero insertar un número demasiado grande hará que los programas tarden mucho en cargar...
+
+								
+
+# Pinta los delineadores de niveles\bloques de color verde claro.
+color lightgreen "inicio|fin"
+
+# Pinta las demás palabras clave de color amarillo claro.
+color brightyellow "ingresar:" "mostrar:"
+
+
+########## Ciclos
+color lagoon   "\ssi" "\ssino" "entonces" "fin si"
+
+color lightred "caso|(fin caso)"
+color red      "en caso de" "fin en caso de"
+
+color peach      "mientras" "fin mientras"
+##########
+
+color bold,white   "hacer"	# TODO: Hacerlo matchear con las palabras reservadas "en caso de" y "mientras"...
+
+########## Variables
+color mauve "float" "integer" "date" "string" "boolean"
+
+color teal "var"
+color blue  "const"
+##########
+
+
+########## Operadores lógicos (Y, O)
+color sand "(\sY\s)|(\sO\s)"
+##########
+
+
+#####################################################
+# Pinta los números de color azul, y con negrita.
+color bold,blue "\s[0-9]*"			# El \s se agrega para esquivar los números no usados como valor (para evitar marcar los números usados en nombres de variables y nombres de programas, por ejemplo).
+color bold,blue "\s[0-9]+\.[0-9]*"		# El \.[0-9] se agrega para detectar los números decimales.
+
+color bold,blue "\([0-9]*"			# Permite detectar los números usados para realizar operaciones matemáticas.
+color bold,blue "\([0-9]+\.[0-9]*"		# Permite detectar los números decimales usados para realizar operaciones matemáticas.
+color bold,white "\("				# Workaround a lo POSIX ERE, dada la imposibilidad de usar patrones de regex lookback.
+
+color bold,blue "\^[0-9]*"		# Permite detectar los números usados para realizar operaciones matemáticas.
+color bold,blue "\^[0-9]+\.[0-9]*"		# Permite detectar los números decimales usados para realizar operaciones matemáticas.
+color bold,white "\^"			# Workaround a lo POSIX ERE, dada la imposibilidad de usar patrones de regex lookback.
+
+#####################################################
+
+# Pinta la palabra reservada "programa" de color magenta chillón.
+color brightmagenta "programa"
+
+# Pinta las cadenas de caractéres de color naranja.
+color orange "\"(([^"\]|((\\*)\4\\")|(\\*)[^\"])*)((\\*)\5)\""			# Créditos a https://gist.github.com/jclosure/63820f48cb6551a43a0b272c3542389f
+
+# Pinta los comentarios de color verde (oscuro).
+color italic,green "//.*"					# Comentarios de una sola línea.
+color italic,green start="\/\*" end="\*\/"			# Comentarios multilínea.
+
+
+
+# Evita un renglón vacío abajo del título.
+set morespace
