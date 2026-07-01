@@ -34,7 +34,7 @@ color lightcyan "programa[ ][A-Z].[^ ]{1,99}"				# Matchea con palabras que arra
 								
 
 # Pinta los delineadores de niveles\bloques de color verde claro.
-color lightgreen "inicio|fin"
+color lightgreen "inicio" "fin"
 
 # Pinta las demás palabras clave de color amarillo claro.
 color brightyellow "ingresar:" "mostrar:"
@@ -43,13 +43,11 @@ color brightyellow "ingresar:" "mostrar:"
 ########## Ciclos
 color lagoon   "\ssi" "\ssino" "entonces" "fin si"
 
-color lightred "caso|(fin caso)"
-color red      "en caso de" "fin en caso de"
+color lightred "caso" "fin caso"
+color red      "en caso de" "hacer\s\'" "fin en caso de"		# Workaround a lo POSIX ERE: Si querés matchear "hacer" con "en caso de", vas a tener que agregar un espacio en blanco después de "hacer"...
 
-color peach      "mientras" "fin mientras"
+color peach    "mientras" "hacer\'" "fin mientras"
 ##########
-
-color bold,white   "hacer"	# TODO: Hacerlo matchear con las palabras reservadas "en caso de" y "mientras"...
 
 ########## Variables
 color mauve "float" "integer" "date" "string" "boolean"
