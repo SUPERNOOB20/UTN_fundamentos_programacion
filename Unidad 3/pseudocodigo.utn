@@ -165,7 +165,7 @@ inicio
 	mostrar: "¡Hola! Ingresá tu altura."
 	ingresar: altura
 
-	en caso de altura hacer
+	en caso de altura hacer 
 		caso altura > 1.70
 			mostrar: "¡Wow! ¡Sos re alte!"
 		caso altura < 1.50
@@ -186,7 +186,7 @@ inicio
 	mostrar: "¡Hola! Ingresá el año a validar."
 	ingresar: anio
 
-	en caso de anio hacer
+	en caso de anio hacer 
 		caso anio >= 2000
 			caso anio <= 2010
 				mostrar: "¡OK! Anio válido :3"		// Corre si 2000 <= anio <= 2010.
@@ -207,7 +207,7 @@ inicio
 	mostrar: "¡Hola! Ingresá tu edad."
 	ingresar: edad
 
-	en caso de edad hacer:
+	en caso de edad hacer 
 	
 		caso edad < 18
 			mostrar: "¡No podés votar todavía! Esperá a ser mayor de edad ;3"
@@ -219,7 +219,7 @@ inicio
 		
 		sino 
 			mostrar: "Tenés que votar, ¡estás obligade a hacerlo!"
-		fin caso
+			
 	fin en caso de
 fin
 
@@ -235,7 +235,7 @@ inicio
 
 	// Vamos a asumir 2 autos por fila.
 
-	en caso de posicionDeSalida hacer
+	en caso de posicionDeSalida hacer 
 	
 		caso posicionDeSalida = 1
 			mostrar: "¡El auto salió primero! :O"
@@ -262,7 +262,7 @@ inicio
 	var float valorDeCompra
 	var float valorEnvio
 
-	en caso de valorDeCompra hacer
+	en caso de valorDeCompra hacer 
 
 		caso valorDeCompra >= 1000 Y valorDeCompra < 2000
 			valorEnvio = 150
@@ -279,7 +279,7 @@ inicio
 		sino		// Cuando el valor de compra es de mayor o igual a $2.000.
 			valorEnvio = 0
 			mostrar: "El envío es gratis :)"
-		fin caso
+			
 	fin en caso de
 fin
 
@@ -293,7 +293,7 @@ inicio
 	mostrar: "¿Con qué vas a pagar? (EFECTIVO / TARJETA)"
 	ingresar: formaDePago
 
-	en caso de formaDePago hacer
+	en caso de formaDePago hacer 
 		caso "EFECTIVO"
 			mostrar: "Genial, muchas gracias, que tengas un buen día :)"
 		fin caso
@@ -305,7 +305,7 @@ inicio
 		sino
 			mostrar: "Lo sentimos, esa forma de pago es inválida."
 			mostrar: "Intente nuevamente con otro medio de pago."
-		fin caso
+			
 	fin en caso de
 fin
 
@@ -360,7 +360,7 @@ inicio
 	mostrar: "Ingrese un código telefónico."
 	ingresar: codigoTelefonico
 
-	en caso de codigoTelefonico hacer
+	en caso de codigoTelefonico hacer 
 		caso "011"
 			ubicacion = "la Capital Autónoma de Buenos Aires."
 		fin caso
@@ -447,15 +447,23 @@ inicio
 	mostrar: "Ingresá la primera letra de la estación del año en la que estamos (P/I/V/O)."
 	ingresar: estacionNombreCompleto
 	
-	en caso de estacionPrimeraLetra hacer
+	en caso de estacionPrimeraLetra hacer 
 		caso "P"
 			mostrar: "Estamos en Primavera."
+		fin caso
+		
 		caso "I"
 			mostrar: "Estamos en Invierno."
+		fin caso
+			
 		caso "V"
 			mostrar: "Estamos en Verano."
+		fin caso
+			
 		caso "O"
 			mostrar: "Estamos en Otoño."
+		fin caso
+			
 		sino
 			mostrar: "Estación inválida... probá nuevamente"
 	fin en caso de

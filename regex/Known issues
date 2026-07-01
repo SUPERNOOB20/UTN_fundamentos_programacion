@@ -1,0 +1,9 @@
+Known issues:
+
+* s[0-9] ggetting matched incorrectly as the name of a program.                                                 // Last present in v1.0.0b. Fixed in +v1.0.0c
+* ([0-9], )[0-9], ^[0-9] and similar patterns not getting matched.											    // Last present in v1.0.0c. Fixed in +v1.0.0d.
+* [][A-Z][A-Z] in strings getting matched incorrectly (fix: stop matching program names at whitespaces).        // Last present in v1.0.0c. Fixed in +v1.0.0d.
+
+* "hacer" pattern matching is ambiguous between "mientras" and "en caso de".                                    // Still present... e.e
+
+If you find any issues not present here, or if you know how to fix one of the remaining issues, please open an Issue or a pull request on git, or contact me by any means necessary :3
