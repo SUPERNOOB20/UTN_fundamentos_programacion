@@ -53,7 +53,7 @@ color peach    "\<(mientras)\>" "hacer\'" "fin hacer" "\<(fin mientras)\>"
 ########## Variables
 color mauve "\<(float)|(integer)|(date)|(string)|(boolean)\>"
 
-color bold,blue "\<(verdadero)|(falso)\>"
+color blue "\<(verdadero)|(falso)\>"
 
 color teal "var"
 color blue "const"
