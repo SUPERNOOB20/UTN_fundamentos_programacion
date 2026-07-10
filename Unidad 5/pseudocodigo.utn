@@ -1,0 +1,44 @@
+// Ejercicio del Material Adicinal 3 - Página 48.
+
+programa ManejaVectoresDeEnteros
+inicio
+	funcion ordenaVector(vector)
+	fin funcion
+
+	funcion ingresaValor(valor)
+	fin funcion
+
+	funcion buscaValor(valor)
+	fin funcion
+
+
+
+
+	
+	funcion principal()
+
+	var integer valor[]
+	var integer opcion
+	var boolean salir = falso 
+	
+		mientras salir = falso hacer
+			mostrar: "¡Bienvenido! Ingrese 1, 2 o 3; según la operación a realizar:"
+			mostrar: ""
+			mostrar: "1: Ingresar un valor."
+			mostrar: "2: Buscar un valor."
+			mostrar: "3: Salir del programa."
+			ingresar: opcion 
+
+			si opcion = 1
+
+			sino si opcion = 2
+
+			sino si opcion = 3
+				salir = verdadero
+			sino
+				mostrar: "La opción que ingresaste es inválida, intente nuevamente."
+		fin mientras
+
+		
+	fin funcion
+fin
