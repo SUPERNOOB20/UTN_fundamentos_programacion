@@ -30,7 +30,7 @@ inicio
 			ingresar: opcion 
 
 			si opcion = 1
-
+				
 			sino si opcion = 2
 
 			sino si opcion = 3
