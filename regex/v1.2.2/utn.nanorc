@@ -46,7 +46,7 @@ color lagoon   "\ssi\>" "\ssino\>" "\<(entonces)\>" "\<(fin si)\>"
 color lightred "caso" "fin caso"
 color red      "\<(en caso de)\>" "hacer\s\'" "\<(fin en caso de)\>"		# Workaround a lo POSIX ERE: Si querés matchear "hacer" con "en caso de", vas a tener que agregar un espacio en blanco después de "hacer"...
 
-color peach    "\<(mientras)\>" "hacer\'" "fin hacer" "\<(fin mientras)\>"
+color peach    "\<(mientras)\>" "hacer\'" "\<(fin mientras)\>"
 ##########
 
 
